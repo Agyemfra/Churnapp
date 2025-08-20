@@ -6,7 +6,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-import joblib
+
 import matplotlib.pyplot as plt
 import seaborn as sns
 
@@ -198,4 +198,5 @@ if uploaded_file is not None:
             csv = batch_df.to_csv(index=False).encode('utf-8')
             st.download_button("Download Results as CSV", csv, "batch_predictions.csv", "text/csv")
     except Exception as e:
+
         st.error(f"Error processing file: {e}")
